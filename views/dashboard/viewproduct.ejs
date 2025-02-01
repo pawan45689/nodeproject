@@ -1,0 +1,65 @@
+<html>
+  <head>
+<style>
+   
+      .col-3 {
+      
+      border: 1px solid black;
+      
+    }
+    .col-9 {
+      
+      border: 1px solid black;
+      
+    }
+    .under{
+      text-decoration: none;
+    }
+    
+      </style>
+</head>
+<body>
+  <%- include('../dashboard/header.ejs') %>
+  <div class="container-fluid mt-5 bg-secondary-subtle">
+      <div class="row">
+          <div class="col-3">
+              <%- include('../dashboard/left.ejs') %>
+          </div>
+          <div class="col-9">
+            <% if(viewproductdata.length>0){%>
+              <table class="table table-bordered table-sm  bg-secondary-subtle " id="table">
+                <thead class=" bg-secondary-subtle">
+                  <tr>
+                    <th>Select Category</th>
+                    <th>Product</th>
+                    <th>Price</th>
+                    <th>Image</th>
+                    <th>Delete/Edit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% for (var i=0; i<viewproductdata.length; i++){%>
+                    <tr>
+                      <td><%= viewproductdata[i]. Category %></td>
+                      <td><%= viewproductdata[i].Product %></td>
+                      <td><%= viewproductdata[i].Price %></td>
+                      <td> <img src="<%= viewproductdata[i].image %>" width="20px" height="20px"> </td>
+                      <td><a href="/delete_1/<%= viewproductdata[i]._id %>"class="bg-danger under text-white">Delete</a> &nbsp; &nbsp;<a href="/edit_1/<%= viewproductdata[i]._id %>"class="bg-info under text-white">Edit</a></td>
+                    </tr>
+                    
+                 <% } %>
+                </tbody>
+
+              </table>
+            <% } else { %>
+              no record found
+           <% } %>
+            
+            
+
+          </div>
+      </div>
+
+  </div> 
+</body>
+  </html>

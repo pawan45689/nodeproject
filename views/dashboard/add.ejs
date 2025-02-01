@@ -1,0 +1,64 @@
+
+    <style>
+     
+      
+      .col-3 {
+        
+        border: 1px solid black;
+        
+      }
+      .col-9 {
+        
+        border: 1px solid black;
+        
+      }
+      
+      
+      
+      
+          </style>
+
+    <%- include('../dashboard/header.ejs') %>
+    <div class="container-fluid mt-5 bg-secondary-subtle">
+        <div class="row">
+            <div class="col-3">
+                <%- include('../dashboard/left.ejs') %>
+            </div>
+          <div class="col-9">
+            
+            <form action="/addproduct" enctype="multipart/form-data" method="post">  
+        <div class="mb-3">
+          <label for="category" class="form-label">Select Category</label>
+          <select class="form-select" name="category" id="category">
+              <option value="">-- Select Category --</option>
+              <option value="Fruits">Fruits</option>
+              <option value="Vegetables">Vegetables</option>
+              <option value="dairy">Dairy</option>
+              <option value="Snacks">Snacks</option>
+              <option value="Beverage">Beverage</option>
+              
+          </select>
+      </div>
+                <div class="mb-3">
+                    <label for="productname" class="form-label"> Product</label>
+                    <input type="text" name="product" class="form-control" id="productname">
+                  </div>
+                <div class="mb-3">
+                  <label for="number" class="form-label"> Price</label>
+                  <input type="number" name="price" class="form-control" id="number">
+                </div>
+                <div class="mb-3">
+                  <label for="image" class="form-label"> Image</label>
+                  <input type="file" name="image" class="form-control" id="image">
+                </div>
+                <!-- <div class="mb-3">
+                    <label for="offer" class="form-label"> Offer</label>
+                    <input type="number" name="offer" class="form-control" id="offer">
+                  </div> -->
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+          </div>
+        </div>
+    </div>
+    

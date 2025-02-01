@@ -1,0 +1,166 @@
+.search-bar {
+    position: relative;
+    width: 100%;
+}
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    padding-left: 40px; 
+    border-radius: 25px;
+    border: 1px solid #ced4da;
+}
+.search-bar .fa-search {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+}
+.category-card {
+  cursor: pointer;
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+}
+
+.category-card a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.category-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.product-card {
+  text-align: center;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.product-card h5 {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+
+
+.side {
+background-color: #278a4f;
+color: #fff;
+padding: 30px;
+border-radius: 8px;
+}
+
+.side h4 {
+text-align: center;
+color: #ecf0f1;
+margin-bottom: 30px;
+font-weight: bold;
+}
+
+.sid ul {
+list-style-type: none;
+padding: 0;
+}
+
+.side ul li {
+padding: 12px 20px;
+margin-bottom: 10px;
+border-radius: 8px;
+cursor: pointer;
+transition: background-color 0.3s ease;
+}
+
+.side ul li:hover {
+background-color: #3498db;
+}
+
+.side ul li i {
+margin-right: 10px;
+}
+
+.side ul li.active {
+background-color: #1abc9c;
+}
+
+
+.content {
+padding: 20px;
+background-color: #ecf0f1;
+}
+
+.category-box {
+background-color: #fff;
+padding: 15px;
+border-radius: 8px;
+text-align: center;
+box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+transition: transform 0.3s ease;
+}
+
+.category-box:hover {
+transform: translateY(-5px);
+}
+
+.category-box img {
+max-width: 100%;
+border-radius: 8px;
+height: 150px;
+object-fit: cover;
+}
+
+.category-box h5 {
+margin-top: 10px;
+font-size: 18px;
+}
+
+.category-box .price {
+  font-size: 1.2rem;
+  color: #000000;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+.list a{
+  text-decoration:none ;
+  color: white;
+}
+.price{
+  font-size: 1.2rem;
+  color: #000000;
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.sticky-cart {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #28a745;
+  padding: 15px 20px;
+  border-radius: 50%;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+}
+.sticky-cart:hover {
+  background-color: #218838;
+}
+

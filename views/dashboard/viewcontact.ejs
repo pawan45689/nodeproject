@@ -1,0 +1,69 @@
+<html>
+  <head>
+<style>
+     
+     
+      
+    .col-3 {
+      
+      border: 1px solid black;
+      
+    }
+    .col-9 {
+      
+      border: 1px solid black;
+      
+    }
+    
+    .under{
+      text-decoration: none;
+    }
+    
+    
+        </style>
+</head>
+<body>
+  <%- include('../dashboard/header.ejs') %>
+  <div class="container-fluid mt-5 bg-secondary-subtle">
+      <div class="row">
+          <div class="col-3">
+              <%- include('../dashboard/left.ejs') %>
+          </div>
+          <div class="col-9">
+            <% if(contactdata.length>0){%>
+              <table class="table table-bordered table-sm " id="table">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Number</th>
+                    <th>Message</th>
+                    <th>Delete/Edit</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% for (var i=0; i<contactdata.length; i++){%>
+                    <tr>
+                      <td><%= contactdata[i].Name %></td>
+                      <td><%= contactdata[i].Email %></td>
+                      <td><%= contactdata[i].Number %></td>
+                      <td><%= contactdata[i].Message %></td>
+                      <td><a href="/delete_2/<%= contactdata[i]._id %>" class="bg-danger under text-white">Delete</a>&nbsp; &nbsp;<a href="/edit_2/<%= contactdata[i]._id %>"class="bg-info under text-white">Edit</a></td>
+                    </tr>
+                    
+                 <% } %>
+                </tbody>
+
+              </table>
+            <% } else { %>
+              no record found
+           <% } %>
+            
+            
+
+          </div>
+      </div>
+
+  </div> 
+</body>
+  </html>

@@ -1,0 +1,75 @@
+<head>
+    <style>
+     
+     
+      
+      .col-3 {
+        
+        border: 1px solid black;
+        
+      }
+      .col-9 {
+        
+        border: 1px solid black;
+        
+      }
+      
+      .under{
+      text-decoration: none;
+    }
+    
+      
+      
+          </style>
+</head>
+<body>
+    <%- include('../dashboard/header.ejs') %>
+    <div class="container-fluid mt-5 bg-secondary-subtle">
+        <div class="row">
+            <div class="col-3">
+                <%- include('../dashboard/left.ejs') %>
+            </div>
+            <div class="col-9">
+              <% if(userdata.length>0){%>
+                <table class="table table-bordered table-sm " id="table">
+                  <thead>
+                    <tr>
+                      <th>Name</th>
+                      <th>Email</th>
+                      <th>Phone</th>
+                      <th>Password</th>
+                      <th>Delete/Edit</th>
+                      
+                    
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <% for (var i=0; i<userdata.length; i++){%>
+                      <tr>
+                        <td><%= userdata[i].Name %></td>
+                        <td><%= userdata[i].Email %></td>
+                        <td><%= userdata[i].Phone %></td>
+                        <td><%= userdata[i].Password %></td>
+                        <td><a href="/delete/<%= userdata[i]._id %>"class="bg-danger under text-white">Delete</a> &nbsp; &nbsp;<a href="/edit/<%= userdata[i]._id %>"class="bg-info under text-white">edit</a></td>
+                      
+                      </tr>
+                      
+                   <% } %>
+                  </tbody>
+
+                </table>
+              <% } else { %>
+
+
+              
+                no record found
+             <% } %>
+              
+              
+
+                
+            </div>
+        </div>
+
+    </div>
+</body> 

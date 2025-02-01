@@ -1,0 +1,50 @@
+
+    
+   
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <%- include('./common/header.ejs')%>
+
+    <div class="container" style="margin-top: 150px;">
+        <h1 class="text-center">Contact & Shoping</h1>
+        <p class="text-center">Ready to shop? Contact us today for special offers and personalized assistance. Y</p>
+        <div class="text-center">
+            <a href="mailto:info@homestay.com" class="btn btn-info">Email Us</a>
+            <a href="tel:+1234567890" class="btn btn-success">Call Us</a>
+        </div>
+        <div class="row mt-4">
+            <div class="col-md-6 mx-auto">
+                <form id="contactForm" action="/contact" method="post">
+                    <div class="mb-3">
+                        <label for="name" class="form-label"> Name</label>
+                        <input type="text" class="form-control" name="name" value="" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label"> Email</label>
+                        <input type="email" class="form-control" name="email" value="" id="email" placeholder="Enter your email" required>
+                    </div>
+                     <div class="mb-3">
+                        <label for="number" class="form-label"> Number</label>
+                        <input type="number" class="form-control" name="number" value="" id="number" placeholder="Enter your number" required  minlength="10" maxlength="12">
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label"> Message</label>
+                        <textarea class="form-control" id="message" name="message" value="" rows="3" placeholder="Type your message here..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send</button>
+                </form>
+            </div>
+
+        </div>
+        
+       
+    <div class="container text-center mt-4">
+        <h5>Follow Us</h5>
+        <a href="https://www.instagram.com/" target="_blank">
+            <i class="fa-brands fa-instagram" style="color: #dc3545; font-size: 50px;"></i>
+        </a>
+        <a href="https://www.facebook.com/" target="_blank">
+            <i class="fa-brands fa-facebook" style="color: #154599; font-size: 50px;"></i>
+        </a>
+    </div>
+    <%- include('./common/footer.ejs')%>
+ 

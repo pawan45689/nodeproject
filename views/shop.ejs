@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shop - Fresh Groceries</title>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f8f9fa;
+      }
+      .search-bar {
+    position: relative;
+    width: 100%;
+    margin-top: 150px;
+}
+.search-bar input {
+    width: 100%;
+    padding: 10px;
+    padding-left: 40px; 
+    border-radius: 25px;
+    border: 1px solid #ced4da;
+}
+.search-bar .fa-search {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #6c757d;
+}
+      .navbar {
+        background-color: #28a745;
+        padding: 10px;
+      }
+      .navbar-brand {
+        color: white;
+        font-weight: bold;
+        font-size: 24px;
+      }
+      .search-bar {
+        max-width: 600px;
+        margin: auto;
+      }
+      .category-title {
+        text-align: center;
+        margin: 30px 0;
+        font-size: 28px;
+        font-weight: bold;
+        color: #333;
+      }
+      .product-card {
+        border: none;
+        border-radius: 8px;
+        padding: 15px;
+        background-color: white;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.2s;
+      }
+      .product-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+      }
+      .product-card img {
+        max-height: 200px;
+        object-fit: contain;
+        width: 100%;
+      }
+      .btn-primary {
+        background-color: #28a745;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        color: white;
+        transition: background-color 0.3s;
+      }
+      .btn-primary:hover {
+        background-color: #218838;
+      }
+      .sticky-cart {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #28a745;
+        padding: 15px 20px;
+        border-radius: 50%;
+        color: white;
+        font-size: 18px;
+        cursor: pointer;
+      }
+      .sticky-cart:hover {
+        background-color: #218838;
+      }
+      .container {
+        padding: 30px 0;
+      }
+      .row {
+        margin-bottom: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <%- include('./common/header.ejs')%>
+    <div class="container mt-5">
+      <div class="row">
+          <div class="col-12 col-md-6 mx-auto">
+              <div class="search-bar">
+                  <i class="fas fa-search"></i>
+                  <input type="text" class="form-control" placeholder="Search here...">
+              </div>
+          </div>
+      </div>
+  </div>
+    
+    <!-- Fresh Fruits Category -->
+    <div class="container">
+      <h2 class="category-title">Fresh Fruits</h2>
+      <div class="row">
+        <!-- Product 1: Apple -->
+        <div class="col-md-4 ">
+          <div class="product-card">
+            <img src="image/apl.jpeg" alt="Apple" />
+            <h5>Apple</h5>
+            <p></p>
+            <button class="btn btn-primary">Add to Cart</button>
+          </div>
+        </div>
+        <!-- Product 2: Banana -->
+        <div class="col-md-4">
+          <div class="product-card">
+            <img src="image/banana.jpeg" alt="Banana" />
+            <h5>Banana</h5>
+            <p></p>
+            <button class="btn btn-primary">Add to Cart</button>
+          </div>
+        </div>
+        <!-- Product 3: Orange -->
+        <div class="col-md-4 ">
+          <div class="product-card">
+            <img src="image/orange.jpeg" alt="Orange" />
+            <h5>Orange</h5>
+            <p></p>
+            <button class="btn btn-primary">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fresh Vegetables Category -->
+    <div class="container">
+      <h2 class="category-title">Fresh Vegetables</h2>
+      <div class="row">
+        <!-- Product 1: Carrot -->
+        <div class="col-md-4 ">
+          <div class="product-card">
+            <img src="image/carrot.jpeg" alt="Carrot" />
+            <h5>Carrot</h5>
+            <p></p>
+            <button class="btn btn-primary">Add to Cart</button>
+          </div>
+        </div>
+        <!-- Product 2: Lettuce -->
+        <div class="col-md-4">
+          <div class="product-card">
+            <img src="image/lettuce.jpeg" alt="Lettuce" />
+            <h5>Lettuce</h5>
+            <p></p>
+            <button class="btn btn-primary">Add to Cart</button>
+          </div>
+        </div>
+        <!-- Product 3: Tomato -->
+        <div class="col-md-4 ">
+          <div class="product-card">
+            <img src="image/tomato.jpeg" alt="Tomato" />
+            <h5>Tomato</h5>
+            <p></p>
+            <button class="btn btn-primary">Add to Cart</button>
+          </div>
+        </div>
+      </div>
+    </div>
+<!-- Snacks & Treats Category -->
+<div class="container">
+  <h2 class="category-title">Snacks & Treats</h2>
+  <div class="row">
+    <!-- Product 1: Chips -->
+    <div class="col-md-4 col-sm-6">
+      <div class="product-card">
+        <img src="image/chips.jpeg" alt="Chips" />
+        <h5>Chips</h5>
+        <p>Crispy, salty chips for snacking anytime.</p>
+        <button class="btn btn-primary">Add to Cart</button>
+      </div>
+    </div>
+    <!-- Product 2: Cookies -->
+    <div class="col-md-4 col-sm-6">
+      <div class="product-card">
+        <img src="image/cookies.jpeg" alt="Cookies" />
+        <h5>Cookies</h5>
+        <p>Delicious cookies, perfect for tea time.</p>
+        <button class="btn btn-primary">Add to Cart</button>
+      </div>
+    </div>
+    <!-- Product 3: Chocolate -->
+    <div class="col-md-4 col-sm-6">
+      <div class="product-card">
+        <img src="image/chocolate.jpeg" alt="Chocolate" />
+        <h5>Chocolate</h5>
+        <p>Rich, creamy chocolate for your sweet cravings.</p>
+        <button class="btn btn-primary">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+<%- include('./common/footer.ejs')%>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

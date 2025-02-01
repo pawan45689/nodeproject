@@ -1,0 +1,57 @@
+
+    <style>
+       
+        .box {
+            background-color:rgb(235, 235, 244);
+            border-radius: 10px;
+            padding: 30px;
+            color: black;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+        .form-title {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-control {
+            border-radius: 5px;
+        }
+       
+       
+       
+    </style>
+
+    <%- include('./common/header.ejs')%>
+
+    <div class="container box mb-5" style="margin-top: 200px;">
+        <h2 class="form-title">Grocery Shop Account Registration</h2>
+        <form action="/register" method="post">
+            <div class="form-group">
+                <label for="name"> Name</label>
+                <input type="text" class="form-control" id="name" value="" name="name" required placeholder="Enter your full name">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="text" class="form-control" id="phone" value="" name="phone" required placeholder="Enter your phone number">
+            </div>
+            <div class="form-group">
+                <label for="email">Email </label>
+                <input type="email" class="form-control" id="email" value="" name="email" required placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" value="" name="password" required placeholder="Create a password">
+            </div>
+           
+           
+            <div class="text-center"><button type="submit" class="btn btn-primary text-center">Register</button></div>
+        </form>
+    </div>
+    <%- include('./common/footer.ejs')%>
+   
+</body>
+</html>

@@ -1,0 +1,70 @@
+
+
+<html>
+  <head>
+    <title>dashboard</title>
+    <style>
+     
+.title {
+  color: rgba(53, 4, 3, 0.905);
+  justify-content: center;
+  text-align: center;
+  font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+}
+
+.col-md-3 {
+  
+  border: 1px solid black;
+  
+}
+.col-md-9 {
+  
+  border: 1px solid black;
+  
+}
+
+
+
+
+    </style>
+
+</head>
+
+
+
+<body>
+
+
+    <%- include('../dashboard/header.ejs') %>
+
+    <div class="container-fluid mt-5 bg-secondary-subtle">
+        <div class="row">
+           
+            <div class="col-md-3 ">
+                <%- include('../dashboard/left.ejs') %>
+            </div>
+
+            
+            <div class="col-md-9 title">
+                <h1 id="element" class="bg-secondary"></h1>
+                 <div><img src="../image/admin.jpeg" style="mix-blend-mode: darken;"></div>
+               
+            </div>
+        </div>
+    </div>
+
+   
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed("#element", {
+          strings: [" Welcome to the Admin Panel!"],
+          typeSpeed: 100,
+        });
+      </script>
+
+
+</body>
+ </html>
